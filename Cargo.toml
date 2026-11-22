@@ -10,6 +10,9 @@ description = "The trait asset editor (pulsar.trait_editor): an editor tool, thi
 crate-type = ["cdylib", "rlib"]
 
 [features]
+# The plugin as a library of its own, loaded by the editor from plugins/editor:
+# cargo build -p <this package> --release --features dll
+dll = ["plugin_editor_api/editor", "plugin_editor_api/shared-dylibs"]
 # The editor links it statically (the installed set); a DLL build leaves it out.
 builtin = []
 

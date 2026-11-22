@@ -125,3 +125,8 @@ fn normalize_legacy_trait(mut value: serde_json::Value) -> anyhow::Result<serde_
     }
     Ok(value)
 }
+
+// The plugin as a library of its own, loaded by the editor from `plugins/editor`
+// (`cargo build -p <this package> --release --features dll`).
+#[cfg(feature = "dll")]
+plugin_editor_api::export_library_plugin!();
