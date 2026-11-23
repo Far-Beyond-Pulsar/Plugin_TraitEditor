@@ -1,7 +1,7 @@
 [package]
 name = "trait_editor_plugin"
 license = "MPL-2.0"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 publish = false
 description = "The trait asset editor (pulsar.trait_editor): an editor tool, this crate its root"
